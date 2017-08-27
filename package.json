@@ -1,5 +1,5 @@
 {
-  "name": "db-anonymizer",
+  "name": "dev-db-data-generator",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {

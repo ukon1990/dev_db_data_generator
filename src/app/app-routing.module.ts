@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CreateTableComponent } from './components/create-table/create-table.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: []
+    component: CreateTableComponent
   }
 ];
 

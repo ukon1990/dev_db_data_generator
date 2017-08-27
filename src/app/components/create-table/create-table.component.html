@@ -1,0 +1,24 @@
+<div *ngIf="db?.tables">
+  <div *ngFor="let table of db.tables" class="card float-left col-md-6">
+    <div class="card-body">
+      <h4 class="card-title">{{ table.tableName }}</h4>
+      <p class="card-text">\___O_o____/</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li 
+        *ngFor="let column of getTableColumns(table)"
+        class="list-group-item"
+        [ngClass]="{
+          'alert alert-warning': table[column].pk,
+          'alert alert-danger': table[column].fk
+        }">
+        {{ table[column].name }} - {{ table[column].dataType }} <br>
+        NN: {{ table[column].notNull }}, Unique: {{ table[column].unique }}
+      </li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>
